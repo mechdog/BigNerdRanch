@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  material: MyString
+  color: MyString
+  order_id: 1
+
+two:
+  material: MyString
+  color: MyString
+  order_id: 1

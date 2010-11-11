@@ -1,0 +1,7 @@
+<h1>The Big Cheese of Widget Land</h1>
+
+<% @supervisors.each do |supervisor|%>
+ 	<%= render :partial=>'person', :locals=>{:person=>supervisor}%>
+	<%end%>
+	
+	<p>That all the boss's we need here, thank-you!</p>

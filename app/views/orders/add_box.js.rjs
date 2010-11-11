@@ -1,0 +1,6 @@
+page.insert_html :bottom, 'box_listing', :partial => 'box',
+:locals => {:box=> @box}
+
+page.replace_html 'total', :partial => 'total'
+
+page.visual_effect :highlight, 'box_listing', :duration => 3

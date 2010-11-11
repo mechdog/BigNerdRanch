@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @order.name %>
+</p>
+<p>
+  <b>Placed On:</b>
+  <%= @order.created_at %>
+</p>
+
+<div id="total">
+   <%= render :partial => 'total'%>
+  </div>
+
+<ul id="box_listing">
+  <% @order.boxes.each do |box|%>
+  <%= render :partial => 'box',
+      :locals => {:box => box}%>
+  <% end %>
+  </uL>
+  
+  <p>Add a box to this order:</p>
+  
+  <%form_tag add_box_order_path(@order), :remote => true do%>
+  <label for="box_order">Box</label> <br />
+  <%= select_tag 'box_id',
+    options_for_select(Box.not_on_orders.collect { |b| [b.description, b.id]}) %>
+    <%=submit_tag 'Add_box'%>
+    <%end%>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @widget.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @widget.description %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @widget.color %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @widget.size %>
+</p>
+
+
+<%= link_to 'Edit', edit_widget_path(@widget) %> |
+<%= link_to 'Back', widgets_path %>
+
+<p>
+  <b>Box:</b>
+  <%=h @widget.box ? @widget.box.material : "Nata"%>
+</p>

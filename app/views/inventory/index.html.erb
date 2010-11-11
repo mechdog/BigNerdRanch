@@ -1,0 +1,13 @@
+<h2>All them bad boys!</h2>
+
+<%@allwidgets.each do |widget|%>
+<p>Name: <%=widget.name%></p>
+<p>Description: <%=widget.description%></p>
+<p>Size(it matters): <%=widget.size%></p>
+<%=link_to('Edit', :controller=>'inventory',:action=>'edit',:id=>widget.id)%>
+<%=link_to('Delete', :controller=>'inventory',:action=>'delete',:id=>widget.id)%>
+<hr>
+
+<%end%>
+
+<p>Create a <%=link_to('New widget', :controller=>'inventory',:action=>'new')%></p>

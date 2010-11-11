@@ -1,0 +1,18 @@
+<h1>Fine, change it!</h1>
+
+<p>Edit dat widget now</p>
+
+<%=form_tag("/inventory/update/#{@widget.id}") do %>
+
+  <%=render :partial=>"edit_widget" %>
+    
+    <p><%= submit_tag 'Update' %></p>
+    
+    <%end%>
+  
+
+
+
+
+
+

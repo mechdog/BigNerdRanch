@@ -1,0 +1,5 @@
+<li id="box_<%= box.id %>">A <%=box.color%> <%=box.material%> box.
+
+<%= link_to 'Remove', {:id => @order.id, :box_id => box.id, :action => :remove_box}, :remote => true %>  
+
+</li>

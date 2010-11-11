@@ -1,0 +1,9 @@
+<h2><%= @widget.name %> <i>and Backwords <%=@widget.name.reverse %></i></h2>
+
+<p>Description: <%=@widget.description%></p>
+<p>Size(it matters): <%=@widget.size%></p>
+<p><%=link_to('Widget List', :controller=>'inventory',:action=>'index')%>
+</p>
+
+
+<b><%= flash[:notice]%></b>

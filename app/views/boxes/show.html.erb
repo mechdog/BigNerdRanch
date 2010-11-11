@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Material:</b>
+  <%= @box.material %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @box.color %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= short_date(@box.created_at) %>
+</p>
+
+
+<%= link_to 'Edit', edit_box_path(@box) %> |
+<%= link_to 'Back', boxes_path %>

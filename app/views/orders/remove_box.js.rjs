@@ -1,0 +1,7 @@
+page.remove "box_#{@box.id}"
+
+page.replace_html 'total', :partial => 'total'
+
+page.visual_effect :highlight, 'total', :duration => 1
+
+# page.visual_effect :scale, 'box_listing', :percent=>200, :duration=>1

@@ -1,0 +1,14 @@
+<h1>How about a widget for ya?</h1>
+
+<p>This widget is for YOU!</p>
+
+<%=form_tag('/inventory/create') do %>
+
+<%=render :partial=>"edit_widget" %>
+
+    <p><%= submit_tag 'Create' %></p>
+    
+    <%end%>
+  
+
+
