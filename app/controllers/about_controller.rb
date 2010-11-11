@@ -9,7 +9,7 @@ class AboutController < ApplicationController
   def contact  
   end
   
-  def future
+  def future #its coming
     @year=2010
      @name=params[:name]||"NoName F'r"
     render :template =>'about/company', :layout =>'beautiful'
